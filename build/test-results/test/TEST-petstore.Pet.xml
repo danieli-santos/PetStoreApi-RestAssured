@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="petstore.Pet" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-14T12:47:15" hostname="spo-a-007069" time="5.951">
+<testsuite name="petstore.Pet" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-14T17:23:18" hostname="spo-a-007069" time="4.094">
   <properties/>
-  <testcase name="consultarPet" classname="petstore.Pet" time="4.826"/>
-  <testcase name="incluirPet" classname="petstore.Pet" time="1.11"/>
+  <testcase name="consultarPet" classname="petstore.Pet" time="4.094"/>
   <system-out><![CDATA[Request method:	GET
 Request URI:	https://petstore.swagger.io/v2/pet/28161106
 Proxy:			<none>
@@ -16,7 +15,7 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Tue, 14 Mar 2023 12:47:19 GMT
+Date: Tue, 14 Mar 2023 17:23:21 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -44,64 +43,6 @@ Server: Jetty(9.2.9.v20150224)
     "status": "available"
 }
 O token é TX1106
-Request method:	POST
-Request URI:	https://petstore.swagger.io/v2/pet
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 28161106,
-    "category": {
-        "id": 1,
-        "name": "TX1106"
-    },
-    "name": "Menina",
-    "photoUrls": [
-        "string"
-    ],
-    "tags": [
-        {
-            "id": 20231106,
-            "name": "data"
-        }
-    ],
-    "status": "available"
-}
-HTTP/1.1 200 OK
-Date: Tue, 14 Mar 2023 12:47:21 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-Server: Jetty(9.2.9.v20150224)
-
-{
-    "id": 28161106,
-    "category": {
-        "id": 1,
-        "name": "TX1106"
-    },
-    "name": "Menina",
-    "photoUrls": [
-        "string"
-    ],
-    "tags": [
-        {
-            "id": 20231106,
-            "name": "data"
-        }
-    ],
-    "status": "available"
-}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

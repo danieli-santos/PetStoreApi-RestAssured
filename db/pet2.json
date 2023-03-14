@@ -1,0 +1,18 @@
+{
+  "id": 28161106,
+  "category": {
+    "id": 1,
+    "name": "TX1106"
+  },
+  "name": "Menina",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 20231106,
+      "name": "data"
+    }
+  ],
+  "status": "available"
+}

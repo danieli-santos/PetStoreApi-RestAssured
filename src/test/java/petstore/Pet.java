@@ -67,5 +67,11 @@ public class Pet {
 
         System.out.println("O token é " + token);
     }
+    
+    @Test
+    public void alterarPet(){
+
+    }
+    
 
 }
