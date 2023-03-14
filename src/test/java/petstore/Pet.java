@@ -69,8 +69,40 @@ public class Pet {
     }
     
     @Test
-    public void alterarPet(){
+    public void alterarPet() throws IOException {
+        String jsonBody = lerJson("db/pet2.json");
 
+        given()
+                .contentType("application/json")
+                .log().all()
+                .body(jsonBody)
+        .when()
+                .put(uri)
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("name", is("Menina"))
+                .body("status", is("sold"));
+
+
+    }
+
+    @Test
+    public void excluirPet(){
+        String petId = "28161106";
+
+        RestAssured.given()
+                .contentType("application/json")
+                .log().all()
+                .when()
+                .delete(uri + "/" + petId)
+                .then()
+                .log().all()
+                .statusCode(200)
+                .body("code", is(200))
+                .body("type", is("unknown"))
+                .body("message", is("28161106"))
+                ;
     }
     
 
