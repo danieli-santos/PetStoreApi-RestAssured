@@ -1,8 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="petstore.Pet" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-09T18:02:38" hostname="spo-a-007069" time="4.752">
+<testsuite name="petstore.Pet" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-14T12:47:15" hostname="spo-a-007069" time="5.951">
   <properties/>
-  <testcase name="incluirPet" classname="petstore.Pet" time="4.752"/>
-  <system-out><![CDATA[Request method:	POST
+  <testcase name="consultarPet" classname="petstore.Pet" time="4.826"/>
+  <testcase name="incluirPet" classname="petstore.Pet" time="1.11"/>
+  <system-out><![CDATA[Request method:	GET
+Request URI:	https://petstore.swagger.io/v2/pet/28161106
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 14 Mar 2023 12:47:19 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 28161106,
+    "category": {
+        "id": 1,
+        "name": "TX1106"
+    },
+    "name": "Menina",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 20231106,
+            "name": "data"
+        }
+    ],
+    "status": "available"
+}
+O token é TX1106
+Request method:	POST
 Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
 Request params:	<none>
@@ -15,25 +57,25 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "id": 0,
+    "id": 28161106,
     "category": {
         "id": 1,
-        "name": "dog"
+        "name": "TX1106"
     },
-    "name": "snoopy",
+    "name": "Menina",
     "photoUrls": [
         "string"
     ],
     "tags": [
         {
-            "id": 2023,
-            "name": "sta"
+            "id": 20231106,
+            "name": "data"
         }
     ],
     "status": "available"
 }
 HTTP/1.1 200 OK
-Date: Thu, 09 Mar 2023 18:02:42 GMT
+Date: Tue, 14 Mar 2023 12:47:21 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -43,19 +85,19 @@ Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 Server: Jetty(9.2.9.v20150224)
 
 {
-    "id": 9223372036854775807,
+    "id": 28161106,
     "category": {
         "id": 1,
-        "name": "dog"
+        "name": "TX1106"
     },
-    "name": "snoopy",
+    "name": "Menina",
     "photoUrls": [
         "string"
     ],
     "tags": [
         {
-            "id": 2023,
-            "name": "sta"
+            "id": 20231106,
+            "name": "data"
         }
     ],
     "status": "available"

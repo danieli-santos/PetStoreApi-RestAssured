@@ -10,7 +10,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.contains;
 
 public class Pet {
     //3.1 - Atributos
@@ -39,18 +41,31 @@ public class Pet {
                 .then()
                 .log().all()
                 .statusCode(200)
-                .body("name", is("snoopy"))
-                .body("status", is("available"));
-
+                .body("name", is("Menina"))
+                .body("status", is("available"))
+                .body("category.name", is("TX1106"))
+                .body("tags.name", contains("data"));//quando tem um lista
     }
+    @Test
+    public void consultarPet(){
+        String petId = "28161106";
 
-//    @Test
-//    public void getPet(){
-//        //String jsonBody = lerJson("db/pet1.json");
-//
-//        RestAssured.
-//                .post(uri)
-//                .statusCode(200);
-//    }
+        String token =
+        given()
+                .contentType("application/json")
+                .log().all()
+        .when()
+                .get(uri + "/" + petId)
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("category.name", is("TX1106"))
+                .body("status", is("available"))
+        .extract()
+                .path("category.name")
+        ;
+
+        System.out.println("O token é " + token);
+    }
 
 }
